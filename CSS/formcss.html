@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4e1e4;
+            text-align: center;
+        }
+        h1 {
+            color: rgb(24, 14, 14);
+            text-decoration: underline;
+            font-style:oblique;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        form {
+            background: rgb(240, 236, 236);
+            padding: 15px;
+            width: 700px;
+            margin: auto;
+            border-radius: 5px;
+            text-align: left; 
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 5px 0;
+        }
+        input, select {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            display: inline-block;
+        }
+        button {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button[type="submit"] {
+            background: rgb(187, 128, 105);
+            color: white;
+        }
+    </style>    
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form>
+        <label>Name :</label>
+        <input type="text" placeholder="Enter your name"><br><br>
+        <label>Address :</label>
+        <input type="text" placeholder="Enter your Address"><br><br>
+        <label>E-mail :</label>
+        <input type="email" placeholder="Enter your email"><br><br>
+        <label>Phone.no :</label>
+        <input type="tel" placeholder="Enter your phone"><br><br>
+        <label>Select Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <br>
+        <label>D.O.B:</label>
+        <input type="date"><br><br>
+        <label>Select your qualification:</label>
+        <select>
+            <option>High School</option>
+            <option>Undergraduate</option>
+            <option>Postgraduate</option>
+        </select><br>
+            <label>Select Interested Job Positions :</label>
+            <label><input type="checkbox" name="job" value="Clerk"> Clerk</label>
+            <label><input type="checkbox" name="job" value="Accountant"> Accountant</label>
+            <label><input type="checkbox" name="job" value="Communication"> Communication</label><br>
+            <button type="submit">Submit</button>
+        </form>
+        
+</body>
+</html>
