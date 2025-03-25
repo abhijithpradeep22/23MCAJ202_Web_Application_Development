@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Javascript Validation</title>
+    <link rel="stylesheet" href="validationstyle.css" >
+</head>
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form onsubmit="return Validation()">
+        <label>Username :</label>
+        <input type="text" id="text1"><br>
+        <label>E-mail :</label>
+        <input type="text" id="etext"><br>
+        <label>Password :</label>
+        <input type="password" id="pass" placeholder="Must contain 8 characters"><br>
+
+        <span id="error" class="error"></span><br>
+
+        <input type="submit" value="SUBMIT">
+        
+    </form>
+    <script>
+        function Validation(){
+            var name = document.getElementById("text1").value.trim();
+            var email = document.getElementById("etext").value.trim();
+            var pass = document.getElementById("pass").value.trim();
+            var error = document.getElementById("error");
+
+            error.innerHTML = "";
+            var epattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if(name == ""){
+                error.innerHTML = "Username is required";
+                return false;
+            }
+            
+            if(email == "" || !email.match(epattern)){
+                error.innerHTML = "Enter a valid E-mail address";
+                return false;
+            }
+
+            if(pass == "" || pass.length < 8){
+                error.innerHTML = "Enter a valid password";
+                return false;
+            }
+
+            alert("Registration Success");
+            return true;
+
+        }
+    </script>
+</body>
+</html>

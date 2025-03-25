@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Hover</title>
+        <style>
+            div{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                gap: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div onmouseover="changeContent()" onmouseout="resetContent()">
+            <img id = "image" src="pexels-cottonbro-cg-studio-70588080-8832747.jpg" width="600px" height="400px">
+            <p id="text">Point Your Mouse Here</p>
+        </div>
+        <script>
+            function changeContent(){
+                document.getElementById("text").innerHTML = "All the Best";
+                document.getElementById("image").src = "pexels-leeloothefirst-5244123.jpg"
+            }
+
+            function resetContent(){
+                 document.getElementById("text").innerHTML = "Point Your Mouse Here";
+                document.getElementById("image").src = "pexels-cottonbro-cg-studio-70588080-8832747.jpg"
+            }
+        </script>  
+    </body>
+</html>

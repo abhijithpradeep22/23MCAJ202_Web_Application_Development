@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Symmetric Matrix or Not</title>
+    </head>
+    <body>
+        <script>
+            let n = parseInt(prompt("Enter the dimension of Matrix"));
+            let matrix = [];
+
+            for(let i = 0; i < n ; i++){
+                matrix[i] = [];
+                for(let j = 0; j < n ;j++){
+                    matrix[i][j] = parseInt(prompt(`Enter element at position [${i}][${j}]`));
+                }
+            }
+
+            document.write("<h2>Matrix Entered :</h2>");
+            for(let  i =0 ; i < n ;i++){
+                for(let j = 0; j <n ;j++){
+                    document.write(matrix[i][j] + " ");
+                }
+                document.write("<br>");
+            }
+            document.write("<br>");
+            let isSymmetric = true;
+            for(let i = 0; i < n ; i++){
+                for(let j = 0; j < n ;j++){
+                    if(matrix[i][j] != matrix[j][i]){
+                        isSymmetric = false;
+                        break;
+                    }
+                }
+                if(!isSymmetric){
+                    break;
+                }
+                
+            }
+            document.write("<h1>");
+            if(isSymmetric){
+                    document.write("MATRIX IS SYMMETRIC");
+                }
+                else{
+                    document.write("MATRIX IS NOT SYMMETRIC");
+                }
+            document.write("</h1>");
+        </script>
+    </body>
+</html>
